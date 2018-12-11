@@ -1,6 +1,6 @@
 {
   "name": "promisify-file-reader",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "Promise File Reader.",
   "main": "lib/index.js",
   "keywords": [
