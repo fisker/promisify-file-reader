@@ -6,7 +6,7 @@ import PromiseFileReader, {
   FileReader,
   File,
   fileReader,
-} from 'promise-file-reader'
+} from 'promisify-file-reader'
 ```
 
 ## Objects
@@ -22,7 +22,7 @@ also explored as `window.PromiseFileReader`
 
 ```js
 // import
-import PromiseFileReader from 'promise-file-reader'
+import PromiseFileReader from 'promisify-file-reader'
 ```
 
 ```js
@@ -38,7 +38,7 @@ a reference of PromiseFileReader
 
 ```js
 // import
-import {FileReader as PromiseFileReader} from 'promise-file-reader'
+import {FileReader as PromiseFileReader} from 'promisify-file-reader'
 ```
 
 #### PromiseFileReader.File
@@ -49,7 +49,7 @@ also explored as `window.PromiseFile`
 
 ```js
 // import
-import {File as PromiseFile} from 'promise-file-reader'
+import {File as PromiseFile} from 'promisify-file-reader'
 ```
 
 ```js
@@ -70,7 +70,7 @@ so the reader can be used easyly
 also explored as `window.promiseFileReader`
 ```js
 // import
-import {fileReader as promiseFileReader} from 'promise-file-reader'
+import {fileReader as promiseFileReader} from 'promisify-file-reader'
 ```
 
 ```js
