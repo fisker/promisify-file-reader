@@ -31,7 +31,7 @@ import PromiseFileReader from 'promisify-file-reader'
 // example
 ;(async file => {
   var pfr = new PromiseFileReader()
-  console.log(await pfr.readAsText())
+  console.log(await pfr.readAsText(file))
 })(new File(['hello from pfr.txt'], 'pfr.txt'))
 ```
 
@@ -82,10 +82,10 @@ import {fileReader as promiseFileReader} from 'promisify-file-reader'
 ```js
 // example
 ;(async file => {
-  console.log(await promiseFileReader.readAsArrayBuffer())
-  console.log(await promiseFileReader.readAsText())
-  console.log(await promiseFileReader.readAsDataURL())
-  console.log(await promiseFileReader.readAsBinaryString())
+  console.log(await promiseFileReader.readAsArrayBuffer(file))
+  console.log(await promiseFileReader.readAsText(file))
+  console.log(await promiseFileReader.readAsDataURL(file))
+  console.log(await promiseFileReader.readAsBinaryString(file))
 })(new File(['hello from pfr.txt'], 'pfr.txt'))
 ```
 
