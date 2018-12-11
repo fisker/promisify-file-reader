@@ -1,0 +1,46 @@
+{
+  "name": "promise-file-reader",
+  "version": "1.0.0",
+  "description": "Promise File Reader.",
+  "main": "lib/index.js",
+  "keywords": [
+    "promise",
+    "file",
+    "fileReader"
+  ],
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://github.com/fisker"
+  },
+  "scripts": {
+    "update-dependencies": "yarn upgrade-interactive --latest",
+    "build": "rm -rf lib && mkdir lib && uglifyjs --compress --mangle --output lib/index.js -- src/index.js",
+    "test": "yarn build && jest",
+    "release": "np --no-yarn --no-cleanup"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "MIT",
+  "repository": "fisker/promise-file-reader",
+  "devDependencies": {
+    "@babel/cli": "^7.1.2",
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "babel-preset-minify": "^0.5.0",
+    "jest": "^23.6.0",
+    "regenerator-runtime": "^0.12.1"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/index.js",
+    "package.json"
+  ],
+  "dependencies": {
+    "uglify-js": "^3.4.9"
+  }
+}
