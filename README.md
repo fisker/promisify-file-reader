@@ -1,6 +1,7 @@
 # Promise File Reader
 
 ## ustage
+
 ```js
 import PromiseFileReader, {
   FileReader,
@@ -14,11 +15,12 @@ import PromiseFileReader, {
 default export object is `PromiseFileReader`
 
 #### PromiseFileReader
+
 a `class` with methods `readAsArrayBuffer`, `readAsText`, `readAsDataURL`,
 `readAsBinaryString` just as `window.FileReader` does, but returns `Promise`, resolve
 with `FileReader.result` or reject with `FileReader.error`.
 
-also explored as `window.PromiseFileReader`
+also exports as `window.PromiseFileReader`
 
 ```js
 // import
@@ -34,6 +36,7 @@ import PromiseFileReader from 'promisify-file-reader'
 ```
 
 #### PromiseFileReader.FileReader
+
 a reference of PromiseFileReader
 
 ```js
@@ -42,10 +45,11 @@ import {FileReader as PromiseFileReader} from 'promisify-file-reader'
 ```
 
 #### PromiseFileReader.File
+
 a `class` takes a `Blob` Object in constructor.
 this also has 4 method as `window.FileReader`, but without `readAs` prefix
 
-also explored as `window.PromiseFile`
+also exports as `window.PromiseFile`
 
 ```js
 // import
@@ -63,11 +67,13 @@ import {File as PromiseFile} from 'promisify-file-reader'
 ```
 
 #### PromiseFileReader.fileReader
+
 a instance of `PromiseFileReader`.
 unlike `window.FileReader`, `PromiseFileReader` don't need to listen `onload` or `onerror` event,
-so the reader can be used easyly
+so the reader can be used easily
 
-also explored as `window.promiseFileReader`
+also exports as `window.promiseFileReader`
+
 ```js
 // import
 import {fileReader as promiseFileReader} from 'promisify-file-reader'
