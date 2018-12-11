@@ -70,7 +70,7 @@ import {File as PromiseFile} from 'promisify-file-reader'
 
 a instance of `PromiseFileReader`.
 unlike `window.FileReader`, `PromiseFileReader` don't need to listen `onload` or `onerror` event,
-so the reader can be used easily
+so the reader can be re-use easily
 
 also exports as `window.promiseFileReader`
 
