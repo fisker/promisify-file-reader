@@ -1,6 +1,22 @@
 # Promisify File Reader
 
-`PromisifyFileReader` is a `class` with methods `readAsArrayBuffer`, `readAsText`, `readAsDataURL`, `readAsBinaryString` just as `window.FileReader` does, but returns `Promise` resolve with `FileReader.result` or reject with `FileReader.error`.
+## API
+
+### PromisifyFileReader.prototype.arrayBuffer
+
+return Promise&lt;ArrayBuffer&gt; use `FileReader.readAsArrayBuffer`
+
+### PromisifyFileReader.prototype.text
+
+return Promise&lt;String&gt; use `FileReader.readAsText`
+
+### PromisifyFileReader.prototype.dataURL
+
+return Promise&lt;String&gt; use `FileReader.readAsDataURL`
+
+### PromisifyFileReader.prototype.binaryString
+
+return Promise&lt;String&gt; use `FileReader.readAsBinaryString`
 
 ## Usage
 
