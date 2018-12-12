@@ -38,3 +38,7 @@ import {
   }
 })(new File(['hello from pfr.txt'], 'pfr.txt', {type: 'text/plain'}))
 ```
+
+## relative
+
+  https://github.com/fisker/promisify-file
