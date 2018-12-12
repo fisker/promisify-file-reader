@@ -4,7 +4,7 @@
 
 ## Usage
 
-## Basic syntax
+### Basic syntax
 
 ```js
 import PromisifyFileReader from 'promisify-file-reader'
@@ -20,7 +20,7 @@ import PromisifyFileReader from 'promisify-file-reader'
 })(new File(['hello from pfr.txt'], 'pfr.txt', {type: 'text/plain'}))
 ```
 
-## Static methods
+### Static methods
 
 ```js
 import {
