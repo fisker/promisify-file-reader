@@ -1,5 +1,7 @@
 # Promisify File Reader
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/fisker/promisify-file-reader.svg)](https://greenkeeper.io/)
+
 ## API
 
 ### PromisifyFileReader.prototype.arrayBuffer
