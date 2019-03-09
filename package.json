@@ -3,11 +3,7 @@
   "version": "2.0.2",
   "description": "Promise File Reader.",
   "main": "lib/index.js",
-  "keywords": [
-    "promise",
-    "file",
-    "fileReader"
-  ],
+  "keywords": ["promise", "file", "fileReader"],
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
@@ -28,18 +24,28 @@
     "@babel/cli": "^7.1.2",
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "@xwtec/eslint-config": "^3.7.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^24.0.0",
     "babel-preset-minify": "^0.5.0",
+    "cz-conventional-changelog-emoji": "^0.1.0",
+    "eslint": "^5.15.1",
+    "husky": "^1.3.1",
     "jest": "^24.0.0",
+    "lint-staged": "^8.1.5",
+    "markdownlint-cli": "^0.14.0",
+    "np": "^4.0.2",
+    "prettier": "^1.16.4",
     "puppeteer": "^1.11.0",
     "regenerator-runtime": "^0.13.1",
     "uglify-js": "^3.4.9"
   },
-  "files": [
-    "LICENSE",
-    "README.md",
-    "lib/index.js",
-    "package.json"
-  ]
+  "files": ["LICENSE", "README.md", "lib/index.js", "package.json"],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-emoji"
+    }
+  }
 }
