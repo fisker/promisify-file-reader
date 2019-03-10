@@ -58,7 +58,7 @@
     "rollup-plugin-terser": "^4.0.4",
     "uglify-js": "^3.4.9"
   },
-  "files": ["lib/index.js"],
+  "files": ["lib"],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
