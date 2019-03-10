@@ -16,17 +16,13 @@ function readBlobAsPromise(method) {
   })
 }
 
-function callMethod(method) {
-  return readBlobAsPromise.bind(this, method)
-}
+function PromisifyFileReader() {}
 
-class PromisifyFileReader {}
-
-dataTypes.forEach(function(type) {
+for (const type of dataTypes) {
   const methodName = `readAs${type}`
-  const method = FileReader.prototype[methodName]
-  PromisifyFileReader.prototype[methodName] = callMethod(method)
-  PromisifyFileReader[methodName] = callMethod(method)
-})
+  const method = readBlobAsPromise.bind(null, FileReader.prototype[methodName])
+  PromisifyFileReader.prototype[methodName] = method
+  PromisifyFileReader[methodName] = method
+}
 
 export default PromisifyFileReader
