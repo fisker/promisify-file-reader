@@ -23,7 +23,7 @@
     "build:js": "rollup --config",
     "dist": "npm-run-all dist:*",
     "dist:npm": "np --no-yarn --no-cleanup",
-    "release": "npm-run-all clean build test dist",
+    "release": "npm-run-all -s clean build test dist",
     "test": "jest"
   },
   "publishConfig": {
