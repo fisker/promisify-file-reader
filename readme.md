@@ -1,24 +1,16 @@
 # Promisify File Reader
 
-## API
-
-### PromisifyFileReader.prototype.arrayBuffer
-
-return Promise&lt;ArrayBuffer&gt; use `FileReader.readAsArrayBuffer`
-
-### PromisifyFileReader.prototype.text
-
-return Promise&lt;String&gt; use `FileReader.readAsText`
-
-### PromisifyFileReader.prototype.dataURL
-
-return Promise&lt;String&gt; use `FileReader.readAsDataURL`
-
-### PromisifyFileReader.prototype.binaryString
-
-return Promise&lt;String&gt; use `FileReader.readAsBinaryString`
-
 ## Usage
+
+```html
+<script src="https://unpkg.com/promisify-file-reader"></script>
+```
+
+```html
+<script type="module">
+  import PromisifyFileReader from "https://unpkg.com/promisify-file-reader?module"
+</script>
+```
 
 ### Basic syntax
 
@@ -31,7 +23,7 @@ import PromisifyFileReader from "promisify-file-reader"
   } catch (err) {
     console.error(err)
   }
-})(new File(["hello from pfr.txt"], "pfr.txt", {type: "text/plain"}))
+})()
 ```
 
 ### Static methods
@@ -51,6 +43,24 @@ import {
   }
 })(new File(["hello from pfr.txt"], "pfr.txt", {type: "text/plain"}))
 ```
+
+## API
+
+### PromisifyFileReader.prototype.arrayBuffer
+
+return Promise&lt;ArrayBuffer&gt; use `FileReader.readAsArrayBuffer`
+
+### PromisifyFileReader.prototype.text
+
+return Promise&lt;String&gt; use `FileReader.readAsText`
+
+### PromisifyFileReader.prototype.dataURL
+
+return Promise&lt;String&gt; use `FileReader.readAsDataURL`
+
+### PromisifyFileReader.prototype.binaryString
+
+return Promise&lt;String&gt; use `FileReader.readAsBinaryString`
 
 ## relative
 

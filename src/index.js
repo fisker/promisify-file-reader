@@ -1,71 +1,32 @@
-/* globals define: true, module: true */
-;(function () {
-  'use strict'
+// eslint-disable-next-line no-new-func
+const globalThis = new Function('return this')()
+const {FileReader, Promise} = globalThis
+const {slice} = Array.prototype
+const dataTypes = ['ArrayBuffer', 'Text', 'DataURL', 'BinaryString']
 
-  var root = Function('return this')() // eslint-disable-line
-  var FileReader = root.FileReader
-  var dataTypes = [
-    'ArrayBuffer',
-    'Text',
-    'DataURL',
-    'BinaryString'
-  ]
+function readBlobAsPromise(method) {
+  // eslint-disable-next-line prefer-rest-params
+  const args = slice.call(arguments, 1)
 
-  function umdExport (name, mod) {
-    if (typeof define === 'function' && define.amd) {
-      define(name, [], function () {
-        return mod
-      })
-    } else if (typeof module === 'object' && module.exports) {
-      module.exports = mod
-    } else {
-      root[name] = mod
-    }
-
-    return mod
-  }
-
-  function readAsPromise (method, file, args) {
-    var fileReader = new FileReader()
-
-    return new Promise(function (resolve, reject) {
-      fileReader.onload = function () {
-        resolve(fileReader.result)
-      }
-
-      fileReader.onerror = function () {
-        reject(fileReader.error)
-      }
-
-      if (args.length <= 1) {
-        method.call(fileReader, file)
-      } else {
-        method.apply(fileReader, args)
-      }
-    })
-  }
-
-  function callMethod (methodName) {
-    var method = FileReader.prototype[methodName]
-
-    return function readAs (file) {
-      return readAsPromise(
-        method,
-        file,
-        arguments
-      )
-    }
-  }
-
-  function PromisifyFileReader () {}
-
-  dataTypes.forEach(function (type) {
-    var methodName = 'readAs' + type
-    PromisifyFileReader.prototype[methodName] = callMethod(methodName)
-    PromisifyFileReader[methodName] = callMethod(methodName)
+  return new Promise(function(resolve, reject) {
+    const fileReader = new FileReader()
+    fileReader.addEventListener('load', () => resolve(fileReader.result))
+    fileReader.addEventListener('error', () => reject(fileReader.error))
+    method.apply(fileReader, args)
   })
+}
 
-  PromisifyFileReader.reader = new PromisifyFileReader()
+function callMethod(method) {
+  return readBlobAsPromise.bind(this, method)
+}
 
-  return umdExport('PromisifyFileReader', PromisifyFileReader)
-})()
+class PromisifyFileReader {}
+
+dataTypes.forEach(function(type) {
+  const methodName = `readAs${type}`
+  const method = FileReader.prototype[methodName]
+  PromisifyFileReader.prototype[methodName] = callMethod(method)
+  PromisifyFileReader[methodName] = callMethod(method)
+})
+
+export default PromisifyFileReader

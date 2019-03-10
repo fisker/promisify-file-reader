@@ -1,17 +1,16 @@
 module.exports = {
-  plugins: [
-  ],
+  plugins: [],
   presets: [
     [
       '@babel/preset-env',
       {
         targets: {
-          node: '0.8'
+          node: '0.8',
         },
-        modules: false
-      }
+        exclude: ['transform-typeof-symbol', 'transform-regenerator'],
+        useBuiltIns: false,
+        modules: false,
+      },
     ],
-    'babel-preset-minify',
   ],
-  moduleId: 'resolvify'
 }

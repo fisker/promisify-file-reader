@@ -21,5 +21,12 @@ module.exports = {
   settings: {},
   rules: {},
   plugins: [],
-  overrides: [],
+  overrides: [
+    {
+      files: '__tests__/**',
+      env: {
+        jest: true,
+      },
+    },
+  ],
 }
