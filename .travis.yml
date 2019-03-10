@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - '8'
+  - '10'
+  - '11'
+sudo: false
+cache: yarn
+before_install:
+  - npm install --global nyc codecov coveralls
+script:
+  - nyc yarn test
+after_script:
+  - nyc report --reporter=text-lcov | coveralls
+  - nyc report --reporter=text-lcov > coverage.lcov && codecov

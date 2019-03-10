@@ -3,6 +3,10 @@
   "version": "2.0.2",
   "description": "Promise File Reader.",
   "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "unpkg": "lib/index.js",
+  "jsdelivr": "lib/index.js",
+  "browser": "lib/index.js",
   "keywords": ["promise", "file", "fileReader"],
   "author": {
     "name": "fisker Cheung",
