@@ -9,4 +9,4 @@ script:
   - yarn build
   - yarn test
 after_script:
-  - jest --coverage | coveralls
+  - yarn coveralls
