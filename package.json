@@ -22,7 +22,7 @@
     "build": "npm-run-all lint build:*",
     "build:js": "rollup --config",
     "dist": "npm-run-all dist:*",
-    "dist:npm": "np --no-yarn --no-cleanup",
+    "dist:npm": "np --no-yarn --yolo",
     "release": "npm-run-all -s clean build test dist",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test": "jest"
