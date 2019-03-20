@@ -30,18 +30,19 @@ import PromisifyFileReader from "promisify-file-reader"
 ### Static methods
 
 ```js
-import PromisifyFileReader from "promisify-file-reader"
-
-const {
+import {
   readAsArrayBuffer,
   readAsText,
   readAsDataURL,
   readAsBinaryString,
-} = PromisifyFileReader
-
+  arrayBuffer,
+  text,
+  dataURL,
+  binaryString,
+} from "promisify-file-reader"
 ;(async file => {
   try {
-    console.log(await readAsDataURL(file))
+    console.log(await dataURL(file))
   } catch (err) {
     console.error(err)
   }
