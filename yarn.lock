@@ -981,9 +981,9 @@
   integrity sha512-WsVzTPshvCSbHThUduGGxbmnwcpkgSctHGHTqzWyFg4lYAuV5qXlyFPOsP3OWqCINfmg/8VXP+zJaa4OxEsBQQ==
 
 "@xwtec/eslint-config@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@xwtec/eslint-config/-/eslint-config-4.0.1.tgz#7d0d7fcd7da1cb4042d84d40664e1fdaaa32dd3e"
-  integrity sha512-jAhI4a162m1eDVQviQ0ZheohQjuvdjsQYrQPiU8EdmsGvPeWQeLEw3Ju4NE80zOerc1M6BFaoZg2TmiN8NyKgQ==
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@xwtec/eslint-config/-/eslint-config-4.0.2.tgz#f435ef74e0c210573169dbf7ebb91a7f9be352e4"
+  integrity sha512-YsdYNDoYRbCtlYEc3+21sr3wMYV1q6UaT6MlX8AaRPTAFj5c7Bp39RiJn0HxTNe7U2tRH9QW779yuV3RMAO67A==
   dependencies:
     eslint-config-prettier "^4.1.0"
     eslint-plugin-prettier "^3.0.1"
