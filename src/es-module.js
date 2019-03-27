@@ -1,4 +1,4 @@
-import PromisifyFileReader from './index'
+import PromisifyFileReader from '.'
 
 const {
   readAsArrayBuffer,
