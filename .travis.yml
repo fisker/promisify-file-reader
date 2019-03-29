@@ -8,7 +8,6 @@ script:
   - yarn lint
   - yarn test-coverage
 after_script:
-  - npm install --global codecov coveralls codacy-coverage
+  - npm install --global codecov coveralls
   - cat ./coverage/lcov.info | coveralls
   - cat ./coverage/lcov.info | codecov
-  - cat ./coverage/lcov.info | codacy-coverage
