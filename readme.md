@@ -1,13 +1,14 @@
 # Promisify File Reader
 
+[![gzip size](http://img.badgesize.io/https://unpkg.com/promisify-file-reader/lib/index.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
+[![downloads](https://img.shields.io/npm/dm/promisify-file-reader.svg?style=flat-square)](https://www.npmtrends.com/promisify-file-reader)
+[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
+[![jsdelivr](https://data.jsdelivr.com/v1/package/npm/promisify-file-reader/badge)](https://www.jsdelivr.com/package/npm/promisify-file-reader)
+
 [![Build Status](https://img.shields.io/travis/fisker/promisify-file-reader.svg?style=flat-square)](https://travis-ci.org/fisker/promisify-file-reader)
 [![Code Coverage](https://img.shields.io/codecov/c/github/fisker/promisify-file-reader.svg?style=flat-square)](https://codecov.io/github/fisker/promisify-file-reader)
 [![MIT License](https://img.shields.io/npm/l/promisify-file-reader.svg?style=flat-square)](https://github.com/fisker/promisify-file-reader/blob/master/license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-
-[![downloads](https://img.shields.io/npm/dm/promisify-file-reader.svg?style=flat-square)](https://www.npmtrends.com/promisify-file-reader)
-[![gzip size](http://img.badgesize.io/https://unpkg.com/promisify-file-reader/lib/index.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
-[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)]
 
 ## Usage
 
