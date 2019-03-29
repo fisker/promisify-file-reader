@@ -1,8 +1,8 @@
 # Promisify File Reader
 
-[![Build Status](https://img.shields.io/travis/paypal/promisify-file-reader.svg?style=flat-square)](https://travis-ci.org/paypal/promisify-file-reader)
-[![Code Coverage](https://img.shields.io/codecov/c/github/paypal/promisify-file-reader.svg?style=flat-square)](https://codecov.io/github/paypal/promisify-file-reader)
-[![MIT License](https://img.shields.io/npm/l/promisify-file-reader.svg?style=flat-square)](https://github.com/paypal/promisify-file-reader/blob/master/license)
+[![Build Status](https://img.shields.io/travis/fisker/promisify-file-reader.svg?style=flat-square)](https://travis-ci.org/fisker/promisify-file-reader)
+[![Code Coverage](https://img.shields.io/codecov/c/github/fisker/promisify-file-reader.svg?style=flat-square)](https://codecov.io/github/fisker/promisify-file-reader)
+[![MIT License](https://img.shields.io/npm/l/promisify-file-reader.svg?style=flat-square)](https://github.com/fisker/promisify-file-reader/blob/master/license)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 [![downloads](https://img.shields.io/npm/dm/promisify-file-reader.svg?style=flat-square)](https://www.npmtrends.com/promisify-file-reader)
