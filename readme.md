@@ -1,5 +1,14 @@
 # Promisify File Reader
 
+[![Build Status](https://img.shields.io/travis/paypal/promisify-file-reader.svg?style=flat-square)](https://travis-ci.org/paypal/promisify-file-reader)
+[![Code Coverage](https://img.shields.io/codecov/c/github/paypal/promisify-file-reader.svg?style=flat-square)](https://codecov.io/github/paypal/promisify-file-reader)
+[![MIT License](https://img.shields.io/npm/l/promisify-file-reader.svg?style=flat-square)](https://github.com/paypal/promisify-file-reader/blob/master/license)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+[![downloads](https://img.shields.io/npm/dm/promisify-file-reader.svg?style=flat-square)](https://www.npmtrends.com/promisify-file-reader)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/promisify-file-reader/lib/index.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
+[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)]
+
 ## Usage
 
 ```html
@@ -12,61 +21,114 @@
 </script>
 ```
 
-### Basic syntax
+## files
 
-```js
-import PromisifyFileReader from "promisify-file-reader"
-;(async file => {
-  const fileReader = new PromisifyFileReader()
-
-  try {
-    console.log(await fileReader.readAsText(file))
-  } catch (err) {
-    console.error(err)
-  }
-})()
-```
-
-### Static methods
-
-```js
-import {
-  readAsArrayBuffer,
-  readAsText,
-  readAsDataURL,
-  readAsBinaryString,
-  arrayBuffer,
-  text,
-  dataURL,
-  binaryString,
-} from "promisify-file-reader"
-;(async file => {
-  try {
-    console.log(await dataURL(file))
-  } catch (err) {
-    console.error(err)
-  }
-})(new File(["hello from pfr.txt"], "pfr.txt", {type: "text/plain"}))
+```text
+lib/
+├─ index.common.js  ( CommonJS )
+├─ index.js         ( UMD )
+├─ index.min.js     ( UMD, compressed )
+├─ index.mjs        ( ES Module )
+└─ index.min.mjs    ( ES Module, compressed )
 ```
 
 ## API
 
-### PromisifyFileReader.prototype.arrayBuffer
+### prototype
 
-return Promise&lt;ArrayBuffer&gt; use `FileReader.readAsArrayBuffer`
+supported all `FileReader` methods:
 
-### PromisifyFileReader.prototype.text
+- `readAsArrayBuffer`
+- `readAsBinaryString`
+- `readAsDataURL`
+- `readAsText`
 
-return Promise&lt;String&gt; use `FileReader.readAsText`
+> `FileReader#readAsBinaryString` is not available in some browser, like IE 10.
+>
+> we use another solution to support it.
 
-### PromisifyFileReader.prototype.dataURL
+example:
 
-return Promise&lt;String&gt; use `FileReader.readAsDataURL`
+```js
+const fileReader = new PromisifyFileReader()
+const result = await fileReader.readAsArrayBuffer(file)
+```
 
-### PromisifyFileReader.prototype.binaryString
+### static methods
 
-return Promise&lt;String&gt; use `FileReader.readAsBinaryString`
+in fact `new PromisifyFileReader()` is not really required, all methods can used as static method
+
+- `readAsArrayBuffer`
+- `readAsBinaryString`
+- `readAsDataURL`
+- `readAsText`
+
+example:
+
+```js
+const result = await PromisifyFileReader.readAsArrayBuffer(file)
+```
+
+### short cut
+
+you can also strip the `readAs` prefix
+
+- `arrayBuffer`
+- `binaryString`
+- `dataURL`
+- `text`
+
+example:
+
+```js
+const result = await PromisifyFileReader.arrayBuffer(file)
+// => same as readAsArrayBuffer
+```
+
+Notice: shortcut is **`NOT`** available for prototype
+
+## ES Module
+
+the ES Module build exports
+
+```js
+{
+  // default
+  PromisifyFileReader as default,
+
+  // named
+  arrayBuffer,
+  binaryString,
+  dataURL,
+  text,
+  readAsArrayBuffer,
+  readAsBinaryString,
+  readAsDataURL,
+  readAsText,
+}
+```
+
+```js
+// import default
+import PromisifyFileReader from "promisify-file-reader"
+
+// import named
+import {
+  arrayBuffer,
+  // ...
+} from "promisify-file-reader"
+
+// import both
+import PromisifyFileReader, {
+  arrayBuffer,
+  // ...
+} from "promisify-file-reader"
+```
 
 ## relative
 
 - [promisify-file](https://github.com/fisker/promisify-file)
+
+## License
+
+MIT © [fisker Cheung](https://www.fiskercheung.com/)

@@ -18,13 +18,18 @@ const minifyPlugins = [babel(), terser(), filesize()]
 
 const moduleName = 'PromisifyFileReader'
 
-function createBuild({esm = false, minify = false}) {
+function createBuild({format, minify = false}) {
+  const entry = format === 'esm' ? 'index' : 'file-reader'
+  const filename = `index${format === 'cjs' ? '.common' : ''}${
+    minify ? '.min' : ''
+  }${format === 'esm' ? '.mjs' : '.js'}`
+
   return {
-    input: `src/${esm ? 'es-module' : 'index'}.js`,
+    input: `src/${entry}.js`,
     output: [
       {
-        file: `lib/index${minify ? '.min' : ''}${esm ? '.mjs' : '.js'}`,
-        format: esm ? 'esm' : 'umd',
+        file: `lib/${filename}`,
+        format,
         name: moduleName,
         sourcemap: true,
       },
@@ -33,6 +38,10 @@ function createBuild({esm = false, minify = false}) {
   }
 }
 
-export default [{}, {minify: true}, {esm: true}, {esm: true, minify: true}].map(
-  createBuild
-)
+export default [
+  {format: 'umd'},
+  {format: 'umd', minify: true},
+  {format: 'esm'},
+  {format: 'esm', minify: true},
+  {format: 'cjs'},
+].map(createBuild)

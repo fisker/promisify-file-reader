@@ -14,5 +14,15 @@ module.exports = {
   settings: {},
   rules: {},
   plugins: [],
-  overrides: [],
+  overrides: [
+    {
+      files: ['__tests__/**/*.js'],
+      env: {
+        jest: true,
+      },
+      globals: {
+        window: true,
+      },
+    },
+  ],
 }

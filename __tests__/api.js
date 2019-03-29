@@ -1,39 +1,52 @@
-const {JSDOM} = require('jsdom')
-const {window} = new JSDOM('')
-const text = 'hello from pfr.txt'
-const textFile = new window.File([text], 'pfr.txt', {type: 'text/plain'})
+/**
+ * @jest-environment jsdom-thirteen
+ */
 
-global.FileReader = window.FileReader
-const PromisifyFileReader = require('../')
-const fr = new PromisifyFileReader()
+import PromisifyFileReader, {
+  arrayBuffer,
+  binaryString,
+  dataURL,
+  text,
+  readAsArrayBuffer,
+  readAsBinaryString,
+  readAsDataURL,
+  readAsText,
+} from '../src'
 
-describe('test explored object', () => {
-  test('PromisifyFileReader is function', () => {
-    expect(PromisifyFileReader).toBeInstanceOf(Function)
-  })
-})
-
-describe('text data type', () => {
-  test('ArrayBuffer', async () => {
-    const result = await fr.readAsArrayBuffer(textFile)
-    expect(result).toBeInstanceOf(window.ArrayBuffer)
-  })
-
-  test('Text', async () => {
-    const result = await fr.readAsText(textFile)
-    expect(result).toBe(text)
+describe('constructor', () => {
+  test('PromisifyFileReader is A class', () => {
+    expect(new PromisifyFileReader()).toBeInstanceOf(PromisifyFileReader)
   })
 
-  test('DataURL', async () => {
-    const result = await fr.readAsDataURL(textFile)
-    const expectResult = result.includes('base64')
-      ? `data:text/plain;base64,${Buffer.from(text).toString('base64')}`
-      : `data:text/plain;charset=undefined,${encodeURIComponent(text)}`
-    expect(result).toBe(expectResult)
+  test('arrayBuffer', () => {
+    const fileReader = new PromisifyFileReader()
+    expect(readAsArrayBuffer).toBe(arrayBuffer)
+    expect(PromisifyFileReader.arrayBuffer).toBe(arrayBuffer)
+    expect(PromisifyFileReader.readAsArrayBuffer).toBe(arrayBuffer)
+    expect(fileReader.readAsArrayBuffer).toBe(arrayBuffer)
   })
 
-  test('BinaryString', async () => {
-    const result = await fr.readAsBinaryString(textFile)
-    expect(result).toBe(text)
+  test('binaryString', () => {
+    const fileReader = new PromisifyFileReader()
+    expect(readAsBinaryString).toBe(binaryString)
+    expect(PromisifyFileReader.binaryString).toBe(binaryString)
+    expect(PromisifyFileReader.readAsBinaryString).toBe(binaryString)
+    expect(fileReader.readAsBinaryString).toBe(binaryString)
+  })
+
+  test('dataURL', () => {
+    const fileReader = new PromisifyFileReader()
+    expect(readAsDataURL).toBe(dataURL)
+    expect(PromisifyFileReader.dataURL).toBe(dataURL)
+    expect(PromisifyFileReader.readAsDataURL).toBe(dataURL)
+    expect(fileReader.readAsDataURL).toBe(dataURL)
+  })
+
+  test('text', () => {
+    const fileReader = new PromisifyFileReader()
+    expect(readAsText).toBe(text)
+    expect(PromisifyFileReader.text).toBe(text)
+    expect(PromisifyFileReader.readAsText).toBe(text)
+    expect(fileReader.readAsText).toBe(text)
   })
 })
