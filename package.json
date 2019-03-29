@@ -2,7 +2,7 @@
   "name": "promisify-file-reader",
   "version": "3.0.1",
   "description": "Promise File Reader.",
-  "main": "lib/index.js",
+  "main": "lib/index.common.js",
   "module": "lib/index.min.mjs",
   "unpkg": "lib/index.min.js",
   "jsdelivr": "lib/index.min.js",
