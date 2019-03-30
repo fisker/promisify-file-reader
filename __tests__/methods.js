@@ -11,8 +11,6 @@ import {
   readAsText,
 } from '../src'
 
-import arrayBufferToBinaryString from '../src/helper/array-buffer-to-binary-string'
-
 const png = readFileSync(`${__dirname}/test.png`)
 
 const pngFile = new window.File([png.buffer], 'test.png', {
@@ -58,13 +56,5 @@ describe('text data type', () => {
   test('BinaryString', async () => {
     const result = await readAsBinaryString(textFile)
     expect(result).toBe(Buffer.from(text).toString('binary'))
-  })
-})
-
-describe('polyfill should work', () => {
-  test('arrayBufferToBinaryString unit test', () => {
-    const binary = png.toString('binary')
-    const binary2 = arrayBufferToBinaryString(png.buffer)
-    expect(binary).toBe(binary2)
   })
 })
