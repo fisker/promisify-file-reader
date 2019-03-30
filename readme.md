@@ -79,7 +79,7 @@ you can also strip the `readAs` prefix
 - `dataURL`
 - `text`
 
-Notice: shortcut is **NOT** available in prototype
+Notice: shortcuts are **NOT** available in prototype
 
 example:
 
