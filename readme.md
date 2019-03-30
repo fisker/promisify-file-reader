@@ -22,7 +22,7 @@
 </script>
 ```
 
-## files
+## Files
 
 ```text
 lib/
@@ -35,7 +35,7 @@ lib/
 
 ## API
 
-### prototype
+### Prototype
 
 supported all `FileReader` methods:
 
@@ -44,9 +44,9 @@ supported all `FileReader` methods:
 - `readAsDataURL`
 - `readAsText`
 
-> `FileReader#readAsBinaryString` is not available in some browser, like IE 10.
+> `FileReader#readAsBinaryString` is not available in some browser, like IE 10
 >
-> we use another solution to support it.
+> we use arrayBuffer to binaryString to support this method
 
 example:
 
@@ -55,7 +55,7 @@ const fileReader = new PromisifyFileReader()
 const result = await fileReader.readAsArrayBuffer(file)
 ```
 
-### static methods
+### Static methods
 
 in fact `new PromisifyFileReader()` is not really required, all methods can used as static method
 
@@ -70,7 +70,7 @@ example:
 const result = await PromisifyFileReader.readAsArrayBuffer(file)
 ```
 
-### short cut
+### Shortcuts
 
 you can also strip the `readAs` prefix
 
@@ -79,14 +79,14 @@ you can also strip the `readAs` prefix
 - `dataURL`
 - `text`
 
+Notice: shortcut is **NOT** available in prototype
+
 example:
 
 ```js
 const result = await PromisifyFileReader.arrayBuffer(file)
 // => same as readAsArrayBuffer
 ```
-
-Notice: shortcut is **`NOT`** available for prototype
 
 ## ES Module
 
@@ -109,6 +109,8 @@ the ES Module build exports
 }
 ```
 
+import example:
+
 ```js
 // import default
 import PromisifyFileReader from "promisify-file-reader"
@@ -126,7 +128,7 @@ import PromisifyFileReader, {
 } from "promisify-file-reader"
 ```
 
-## relative
+## Related
 
 - [promisify-file](https://github.com/fisker/promisify-file)
 
