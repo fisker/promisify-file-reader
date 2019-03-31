@@ -118,10 +118,11 @@ function isNotDefault(config, option) {
 function toOverrides(config) {
   const {lang} = config
 
-  const ext = toArray(config.ext || lang)
+  const extensions = toArray(config.ext || lang)
   const parser = config.parser || lang
 
-  const files = ext.length > 1 ? `*.{${ext}}` : `*.${ext}`
+  const files =
+    extensions.length > 1 ? `*.{${extensions.join(',')}}` : `*.${extensions}`
 
   const options = {
     parser,
