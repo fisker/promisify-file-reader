@@ -1263,10 +1263,10 @@ babel-plugin-jest-hoist@^24.3.0:
   dependencies:
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-transform-async-to-promises@^0.8.7:
-  version "0.8.7"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-to-promises/-/babel-plugin-transform-async-to-promises-0.8.7.tgz#8e9d214f54a0fabba4088dda4c8df214d4698429"
-  integrity sha512-znRrOjUy8gDHs6c40dpqVnYrzvCEWyISnLVS1U1ZJvahX2YF19tI8Rq3tI7u7SFe4bE48oceEVY437pYDnRYpQ==
+babel-plugin-transform-async-to-promises@^0.8.8:
+  version "0.8.8"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-async-to-promises/-/babel-plugin-transform-async-to-promises-0.8.8.tgz#6d002340bfa0e2d09f7225bb72b003a5003ddb84"
+  integrity sha512-pJ9Hs14wxvBQZxmw40yv/Ia7bAQGPk7RDWf0hysLa7C3OGbwTbWQhOwW5+rDaJGI5fMTgTQThUoihbZzb0CkJQ==
 
 babel-polyfill@6.26.0:
   version "6.26.0"
