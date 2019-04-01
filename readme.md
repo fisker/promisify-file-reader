@@ -57,7 +57,7 @@ const result = await fileReader.readAsArrayBuffer(file)
 
 ### Static methods
 
-in fact `new PromisifyFileReader()` is not really required, all methods can used as static
+in fact `new PromisifyFileReader()` is not really required, all methods can use as static
 
 - `readAsArrayBuffer`
 - `readAsBinaryString`
