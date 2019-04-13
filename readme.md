@@ -18,7 +18,7 @@
 
 ```html
 <script type="module">
-  import PromisifyFileReader from "https://unpkg.com/promisify-file-reader?module"
+  import PromisifyFileReader from 'https://unpkg.com/promisify-file-reader?module'
 </script>
 ```
 
@@ -113,19 +113,19 @@ import example:
 
 ```js
 // import default
-import PromisifyFileReader from "promisify-file-reader"
+import PromisifyFileReader from 'promisify-file-reader'
 
 // import named
 import {
   arrayBuffer,
   // ...
-} from "promisify-file-reader"
+} from 'promisify-file-reader'
 
 // import both
 import PromisifyFileReader, {
   arrayBuffer,
   // ...
-} from "promisify-file-reader"
+} from 'promisify-file-reader'
 ```
 
 ## Related
