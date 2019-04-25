@@ -9,10 +9,8 @@
 
 module.exports = {
   root: true,
-  parserOptions: {},
-  extends: ['@fisker'],
-  settings: {},
-  rules: {},
-  plugins: [],
-  overrides: [],
+  extends: ['@fisker', '@fisker/jest'],
+  globals: {
+    window: true,
+  },
 }
