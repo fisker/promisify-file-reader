@@ -10,7 +10,7 @@ const prettierPlugins = [
   babel(),
   rollupPrettier({
     ...prettierConfig,
-    sourceMap: true,
+    sourcemap: true,
   }),
   filesize(),
 ]
