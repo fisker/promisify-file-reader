@@ -1,13 +1,17 @@
 {
   "name": "promisify-file-reader",
-  "version": "3.0.3",
+  "version": "3.0.4",
   "description": "Promise File Reader.",
   "main": "lib/index.common.js",
   "module": "lib/index.min.mjs",
   "unpkg": "lib/index.min.js",
   "jsdelivr": "lib/index.min.js",
   "browser": "lib/index.min.js",
-  "keywords": ["promise", "file", "fileReader"],
+  "keywords": [
+    "promise",
+    "file",
+    "fileReader"
+  ],
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
@@ -59,7 +63,9 @@
     "rollup-plugin-prettier": "^0.6.0",
     "rollup-plugin-terser": "^4.0.4"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog-emoji"
