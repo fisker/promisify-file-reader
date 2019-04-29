@@ -825,12 +825,12 @@
     "@commitlint/config-conventional" "^7.5.0"
     "@fisker/eslint-config" "^1.0.5"
 
-"@fisker/eslint-config-jest@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/@fisker/eslint-config-jest/-/eslint-config-jest-1.0.1.tgz#5bda859d0700f71cbe628a9087c4d35df4e8376d"
-  integrity sha512-36IFHeZulk0EHGQNePOH5u8Idc/m8OO1anWKSILLHg+MhEV3r8TnrdvJi79U6Ze+IBVjMhUNHSAPv5p72Rpj+Q==
+"@fisker/eslint-config-jest@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config-jest/-/eslint-config-jest-1.0.2.tgz#be69c82e16cbbbb44b8ad3ed17404ee41ec69876"
+  integrity sha512-5QhjeD8OtVRgTp7+B1pebB2B8oens6+ewZzsdR2aDS2FPKgENZwpbT4Fg7tTw/a/GpZDjkPa5wBr9uoiN1pkuw==
   dependencies:
-    eslint-plugin-jest "^22.4.1"
+    eslint-plugin-jest "^22.5.1"
 
 "@fisker/eslint-config@^1.0.5", "@fisker/eslint-config@^1.0.7":
   version "1.0.7"
@@ -2365,10 +2365,10 @@ eslint-plugin-import@^2.17.2:
     read-pkg-up "^2.0.0"
     resolve "^1.10.0"
 
-eslint-plugin-jest@^22.4.1:
-  version "22.5.0"
-  resolved "https://registry.npm.taobao.org/eslint-plugin-jest/download/eslint-plugin-jest-22.5.0.tgz#3a02527a5b08f7232f7bb0a52da98407bf84cdd0"
-  integrity sha1-OgJSelsI9yMve7ClLamEB7+EzdA=
+eslint-plugin-jest@^22.5.1:
+  version "22.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.5.1.tgz#a31dfe9f9513c6af7c17ece4c65535a1370f060b"
+  integrity sha512-c3WjZR/HBoi4GedJRwo2OGHa8Pzo1EbSVwQ2HFzJ+4t2OoYM7Alx646EH/aaxZ+9eGcPiq0FT0UGkRuFFx2FHg==
 
 eslint-plugin-node@^8.0.1:
   version "8.0.1"
