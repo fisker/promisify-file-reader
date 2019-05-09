@@ -817,10 +817,10 @@
   dependencies:
     find-up "^2.1.0"
 
-"@fisker/commitlint-config@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@fisker/commitlint-config/-/commitlint-config-1.0.7.tgz#d4d86f89f12d0b567acccbde99ed069069875067"
-  integrity sha512-4LTr0ZjYcSWvew3AOfmOdnlbr2LaZhXa6edNmtaj2MBXXYp2Bu4hSP4OK/LnPKoz/Djotzbj7FtsWpigbSSzMw==
+"@fisker/commitlint-config@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@fisker/commitlint-config/-/commitlint-config-1.0.8.tgz#a803c474c4e063d691ee379c816d7d5d28fba701"
+  integrity sha512-6Sq4SCxDIQPEC4Liq7e8ia0F/BMmD2LcTI1lV5GmwLTCC3m52ztXiMJMCeAGeYkIPmGuenQKD+WNpbMiYGYCIw==
   dependencies:
     "@commitlint/config-conventional" "^7.6.0"
 
