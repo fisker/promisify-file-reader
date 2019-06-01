@@ -39,7 +39,7 @@
     "@commitlint/cli": "^8.0.0",
     "@fisker/commitlint-config": "^1.0.8",
     "@fisker/eslint-config": "^1.0.14",
-    "@fisker/eslint-config-jest": "^1.0.2",
+    "@fisker/eslint-config-jest": "^1.0.3",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
     "babel-core": "7.0.0-bridge.0",
