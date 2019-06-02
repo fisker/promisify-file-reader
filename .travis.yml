@@ -1,11 +1,15 @@
 language: node_js
 node_js:
   - 'lts/*'
+  - '8'
+  - '10'
+  - '12'
 sudo: false
 cache: yarn
 before_install:
 script:
   - yarn lint
+  - yarn build
   - yarn test-coverage
 after_script:
   - npm install --global codecov coveralls
