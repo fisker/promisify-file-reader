@@ -870,10 +870,10 @@
   dependencies:
     eslint-plugin-jest "^22.6.4"
 
-"@fisker/eslint-config@^1.0.15":
-  version "1.0.15"
-  resolved "https://registry.npmjs.org/@fisker/eslint-config/-/eslint-config-1.0.15.tgz#cb8f865364f1c9171a35cb3db29962bb6e713f87"
-  integrity sha512-8PKqW9Pfaa01FFMvI0aBLnHJCrznElB+p0ZaOcTo8rzS+ufWvB9IFWZNzqLraTFihRJ6d+G3SlstsBX9X3lb+A==
+"@fisker/eslint-config@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config/-/eslint-config-1.1.0.tgz#bcb046d6979f35321b8c0c220b36edcb35e1a4ef"
+  integrity sha512-ZP9KBkSfYZxg18+nn4PH3A+tyfO/KpRalE/E10xn4nybIcqlJRMj6GUpZFZrL9lJVLagtYAQiGzZMYNy+iHO1w==
   dependencies:
     eslint-config-airbnb-base "^13.1.0"
     eslint-config-prettier "^4.3.0"
@@ -3526,7 +3526,7 @@ isstream@~0.1.2:
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-istanbul-lib-coverage@^2.0.2, istanbul-lib-coverage@^2.0.4, istanbul-lib-coverage@^2.0.5:
+istanbul-lib-coverage@^2.0.2, istanbul-lib-coverage@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/istanbul-lib-coverage/-/istanbul-lib-coverage-2.0.5.tgz#675f0ab69503fad4b1d849f736baaca803344f49"
   integrity sha512-8aXznuEPCJvGnMSRft4udDRDtb1V3pkQkMMI5LI+6HuQz5oQ4J2UFn1H82raA3qJtyOLkkwVqICBQkjnGtn5mA==
