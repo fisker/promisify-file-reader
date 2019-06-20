@@ -2,7 +2,11 @@
   "name": "promisify-file-reader",
   "description": "Promise File Reader",
   "license": "MIT",
-  "author": "fisker Cheung <lionkay@gmail.com> (https://www.fiskercheung.com/)",
+  "author": {
+    "name": "fisker Cheung",
+    "email": "lionkay@gmail.com",
+    "url": "https://www.fiskercheung.com/"
+  },
   "repository": "fisker/promise-file-reader",
   "version": "3.0.4",
   "main": "lib/index.common.js",
@@ -19,13 +23,15 @@
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "lint": "run-p lint:*",
-    "lint:eslint": "eslint **/*.{js,mjs,vue} --fix",
+    "lint:eslint": "eslint **/*.{js,mjs,vue}",
     "lint:markdown": "markdownlint **/*.md --ignore \"**/node_modules/**\"",
-    "release": "run-s lint clean build test dist",
+    "release": "run-s lint clean build test format dist",
     "test": "jest",
     "test-coverage": "jest --coverage",
     "prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write",
-    "update-dependencies": "yarn upgrade-interactive --latest"
+    "format": "run-p format:*",
+    "format:eslint": "yarn lint:eslint --fix",
+    "format:prettier": "prettier **/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml} --write"
   },
   "config": {
     "commitizen": {
@@ -40,6 +46,7 @@
     "@fisker/commitlint-config": "^1.0.9",
     "@fisker/eslint-config": "^1.1.1",
     "@fisker/eslint-config-jest": "^1.0.3",
+    "@fisker/husky-config": "^1.1.0",
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
     "babel-jest": "^24.8.0",
@@ -70,5 +77,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "jsdelivr": "lib/index.min.js",
-  "unpkg": "lib/index.min.js"
+  "unpkg": "lib/index.min.js",
+  "sideEffects": false
 }
