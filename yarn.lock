@@ -863,12 +863,12 @@
   dependencies:
     "@commitlint/config-conventional" "^8.0.0"
 
-"@fisker/eslint-config-jest@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/@fisker/eslint-config-jest/-/eslint-config-jest-1.0.3.tgz#3244a3fad16626f066fb7a6981cab0d6dd72188b"
-  integrity sha512-PTM/PZi/P1/8b3TCZTgwcV3zRRHu+L+0uKf0nf8ASBS6OcSAaGchYFPNzYlfyeLEJgeu7+y13tieU7vl8CeAcA==
+"@fisker/eslint-config-jest@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@fisker/eslint-config-jest/-/eslint-config-jest-1.0.4.tgz#efafc1e3319a180313dc88a2eeaa57105d3eeb56"
+  integrity sha512-d0uwdNVrNsOBUwJmkHJ/22zibNTRj+46SvgUP+FNaSpB3h/ZA+GsfPmrns7iEgJOsRE0OrXx3N3zogb4hPoK9Q==
   dependencies:
-    eslint-plugin-jest "^22.6.4"
+    eslint-plugin-jest "^22.7.0"
 
 "@fisker/eslint-config@^1.1.3":
   version "1.1.3"
@@ -2373,7 +2373,7 @@ eslint-plugin-import@^2.17.3:
     read-pkg-up "^2.0.0"
     resolve "^1.11.0"
 
-eslint-plugin-jest@^22.6.4:
+eslint-plugin-jest@^22.7.0:
   version "22.7.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-jest/-/eslint-plugin-jest-22.7.0.tgz#a1d325bccb024b04f5354c56fe790baba54a454c"
   integrity sha512-0U9nBd9V6+GKpM/KvRDcmMuPsewSsdM7NxCozgJkVAh8IrwHmQ0aw44/eYuVkhT8Fcdhsz0zYiyPtKg147eXMQ==
