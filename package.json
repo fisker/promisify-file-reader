@@ -52,7 +52,7 @@
     "babel-jest": "^24.8.0",
     "babel-plugin-transform-async-to-promises": "^0.8.12",
     "cz-conventional-changelog-emoji": "^0.1.0",
-    "eslint": "^5.16.0",
+    "eslint": "^6.0.0",
     "husky": "^2.4.1",
     "jest": "^24.8.0",
     "jest-environment-jsdom-thirteen": "^1.0.1",
