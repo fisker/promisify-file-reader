@@ -50,7 +50,7 @@
     "@fisker/lint-staged-config": "^1.0.4",
     "@fisker/prettier-config": "^1.0.17",
     "babel-jest": "^24.8.0",
-    "babel-plugin-transform-async-to-promises": "^0.8.12",
+    "babel-plugin-transform-async-to-promises": "^0.8.13",
     "cz-conventional-changelog-emoji": "^0.1.0",
     "eslint": "^6.0.1",
     "husky": "^3.0.1",
