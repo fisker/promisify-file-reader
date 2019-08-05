@@ -4,7 +4,7 @@ node_js:
 cache:
   yarn: true
 before_install:
-  - npm install --global yarn nyc
+  - npm install --global yarn
 install:
   - yarn
 script:
