@@ -35,7 +35,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog-emoji"
+      "path": "./node_modules/cz-conventional-changelog"
     }
   },
   "devDependencies": {
@@ -51,7 +51,7 @@
     "@fisker/prettier-config": "^1.0.18",
     "babel-jest": "^24.9.0",
     "babel-plugin-transform-async-to-promises": "^0.8.14",
-    "cz-conventional-changelog-emoji": "^0.1.0",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.2.2",
     "husky": "^3.0.4",
     "jest": "^24.9.0",
