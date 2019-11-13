@@ -9,22 +9,24 @@
   },
   "repository": "fisker/promise-file-reader",
   "version": "3.0.4",
-  "main": "lib/index.common.js",
-  "module": "lib/index.min.mjs",
-  "browser": "lib/index.min.js",
+  "main": "dist/index.common.js",
+  "module": "dist/index.min.mjs",
+  "browser": "dist/index.min.js",
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
-    "clean": "rimraf lib",
+    "clean": "run-p clean:*",
+    "clean:dist": "del-cli dist",
     "dev": "rollup --config --watch",
     "dist": "run-p dist:*",
     "dist:npm": "np --yolo --no-yarn",
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --write",
+    "format:markdown": "yarn lint:markdown --fix",
+    "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
@@ -52,6 +54,7 @@
     "babel-jest": "24.9.0",
     "babel-plugin-transform-async-to-promises": "0.8.15",
     "cz-conventional-changelog": "3.0.2",
+    "del-cli": "3.0.0",
     "eslint": "6.6.0",
     "husky": "3.0.9",
     "jest": "24.9.0",
@@ -76,7 +79,7 @@
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "jsdelivr": "lib/index.min.js",
-  "unpkg": "lib/index.min.js",
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
   "sideEffects": false
 }

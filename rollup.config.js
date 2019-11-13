@@ -28,7 +28,7 @@ function createBuild({format, minify = false}) {
     input: `src/${entry}.js`,
     output: [
       {
-        file: `lib/${filename}`,
+        file: `dist/${filename}`,
         format,
         name: moduleName,
         sourcemap: true,
