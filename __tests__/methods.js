@@ -1,5 +1,5 @@
 /**
- * @jest-environment jsdom-thirteen
+ * @jest-environment jsdom-fifteen
  */
 
 import {readFileSync} from 'fs'

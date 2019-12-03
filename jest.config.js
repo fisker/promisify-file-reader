@@ -3,6 +3,6 @@ module.exports = {
   collectCoverageFrom: ['src/**/*'],
   verbose: true,
   testPathIgnorePatterns: ['.eslintrc.js'],
-  testEnvironment: 'jest-environment-jsdom-thirteen',
+  testEnvironment: 'jest-environment-jsdom-fifteen',
   testEnvironmentOptions: {resources: 'usable'},
 }
