@@ -1,20 +1,28 @@
 {
   "name": "promisify-file-reader",
+  "version": "3.0.4",
   "description": "Promise File Reader",
+  "keywords": [
+    "file",
+    "fileReader",
+    "promise"
+  ],
+  "repository": "fisker/promise-file-reader",
   "license": "MIT",
   "author": {
     "name": "fisker Cheung",
     "email": "lionkay@gmail.com",
     "url": "https://www.fiskercheung.com/"
   },
-  "repository": "fisker/promise-file-reader",
-  "version": "3.0.4",
-  "main": "dist/index.common.js",
-  "module": "dist/index.min.mjs",
-  "browser": "dist/index.min.js",
   "files": [
     "dist"
   ],
+  "sideEffects": false,
+  "main": "dist/index.common.js",
+  "jsdelivr": "dist/index.min.js",
+  "unpkg": "dist/index.min.js",
+  "module": "dist/index.min.mjs",
+  "browser": "dist/index.min.js",
   "scripts": {
     "build": "run-p build:*",
     "build:js": "rollup --config",
@@ -26,10 +34,12 @@
     "format": "run-p format:*",
     "format:eslint": "yarn lint:eslint --fix",
     "format:markdown": "yarn lint:markdown --fix",
+    "format:package-json": "sort-package-json \"package.json\" \"packages/*/package.json\"",
     "format:prettier": "yarn lint:prettier --write",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint \"**/*.{js,mjs,vue}\"",
     "lint:markdown": "markdownlint \"**/*.md\" --ignore \"**/node_modules/**\"",
+    "lint:package-json": "yarn run format:package-json --check",
     "lint:prettier": "prettier \"**/*.{css,html,js,json,less,md,scss,ts,vue,yaml,yml}\" --check",
     "release": "run-s lint clean build test format dist",
     "test": "jest",
@@ -68,18 +78,11 @@
     "rollup-plugin-babel": "4.3.3",
     "rollup-plugin-filesize": "6.2.1",
     "rollup-plugin-prettier": "0.6.0",
-    "rollup-plugin-terser": "5.1.2"
+    "rollup-plugin-terser": "5.1.2",
+    "sort-package-json": "1.30.0"
   },
-  "keywords": [
-    "file",
-    "fileReader",
-    "promise"
-  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "jsdelivr": "dist/index.min.js",
-  "unpkg": "dist/index.min.js",
-  "sideEffects": false
+  }
 }

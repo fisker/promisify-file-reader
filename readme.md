@@ -1,8 +1,8 @@
 # Promisify File Reader
 
-[![gzip size](http://img.badgesize.io/https://unpkg.com/promisify-file-reader/lib/index.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
+[![gzip size](http://img.badgesize.io/https://unpkg.com/promisify-file-reader/dist/index.min.mjs?compression=gzip&label=gzip%20size&style=flat-square)](https://unpkg.com/promisify-file-reader/dist/)
 [![downloads](https://img.shields.io/npm/dm/promisify-file-reader.svg?style=flat-square)](https://www.npmtrends.com/promisify-file-reader)
-[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/promisify-file-reader/lib/)
+[![module formats: umd, cjs, and es](https://img.shields.io/badge/module%20formats-umd%2C%20cjs%2C%20es-green.svg?style=flat-square)](https://unpkg.com/promisify-file-reader/dist/)
 [![jsdelivr](https://data.jsdelivr.com/v1/package/npm/promisify-file-reader/badge)](https://www.jsdelivr.com/package/npm/promisify-file-reader)
 
 [![Build Status](https://img.shields.io/travis/fisker/promisify-file-reader.svg?style=flat-square)](https://travis-ci.org/fisker/promisify-file-reader)
