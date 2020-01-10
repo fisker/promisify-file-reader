@@ -1,7 +1,6 @@
 import babel from 'rollup-plugin-babel'
 import rollupPrettier from 'rollup-plugin-prettier'
 import {terser} from 'rollup-plugin-terser'
-import filesize from 'rollup-plugin-filesize'
 import prettier from 'prettier'
 
 const prettierConfig = prettier.resolveConfig.sync(`src/index.js`)
@@ -12,9 +11,8 @@ const prettierPlugins = [
     ...prettierConfig,
     sourcemap: true,
   }),
-  filesize(),
 ]
-const minifyPlugins = [babel(), terser(), filesize()]
+const minifyPlugins = [babel(), terser()]
 
 const moduleName = 'PromisifyFileReader'
 
