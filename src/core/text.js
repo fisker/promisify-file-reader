@@ -1,7 +1,7 @@
 import promisify from '../helper/promisify'
-import {FileReader} from '../helper/global-this'
+import {Blob, FileReader} from '../helper/global-this'
 
-const {readAsText} = FileReader.prototype
-const text = promisify(readAsText)
+const text =
+  Blob.prototype.arrayBuffer || promisify(FileReader.prototype.readAsText)
 
 export {text, text as readAsText}
