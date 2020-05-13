@@ -65,7 +65,7 @@
     "@fisker/eslint-config-jest": "1.2.6",
     "@fisker/husky-config": "2.1.2",
     "@fisker/lint-staged-config": "2.1.0",
-    "@fisker/prettier-config": "2.2.1",
+    "@fisker/prettier-config": "2.2.2",
     "babel-jest": "26.0.1",
     "babel-plugin-transform-async-to-promises": "0.8.15",
     "cz-conventional-changelog": "3.2.0",
