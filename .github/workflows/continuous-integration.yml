@@ -18,8 +18,8 @@ jobs:
           # - "macos-latest"
           # - "windows-latest"
         node_version:
-          # - "13"
-          - "12"
+          - "14"
+          # - "12"
           # - "10"
         # exclude:
         #   - os: "macos-latest"
@@ -81,8 +81,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
@@ -101,8 +99,6 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@master
-        with:
-          node-version: "12"
 
       - name: Install Dependencies
         run: yarn
