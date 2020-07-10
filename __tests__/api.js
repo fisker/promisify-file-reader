@@ -1,7 +1,3 @@
-/**
- * @jest-environment jsdom-fifteen
- */
-
 import PromisifyFileReader, {
   arrayBuffer,
   binaryString,

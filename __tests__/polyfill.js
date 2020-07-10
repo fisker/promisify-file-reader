@@ -1,6 +1,3 @@
-/**
- * @jest-environment jsdom-fifteen
- */
 import {readFileSync} from 'fs'
 import arrayBufferToBinaryString from '../src/helper/array-buffer-to-binary-string'
 
