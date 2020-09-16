@@ -1,6 +1,6 @@
 {
   "name": "promisify-file-reader",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Promise File Reader",
   "keywords": [
     "file",
