@@ -1,9 +1,10 @@
+// eslint-disable-next-line unicorn/import-index
 import {
   readAsArrayBuffer,
   readAsBinaryString,
   readAsDataURL,
   readAsText,
-} from './core'
+} from './core/index'
 
 export {
   readAsArrayBuffer,
