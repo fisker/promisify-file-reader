@@ -1,8 +1,6 @@
 import promisify from '../helper/promisify'
 import {FileReader} from '../helper/global-this'
 
-const {readAsDataURL} = FileReader.prototype
+const readAsDataURL = promisify(FileReader.prototype.readAsDataURL)
 
-const dataURL = promisify(readAsDataURL)
-
-export {dataURL, dataURL as readAsDataURL}
+export default readAsDataURL

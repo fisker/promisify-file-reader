@@ -1,17 +1,17 @@
 import promisify from '../helper/promisify'
 import {FileReader} from '../helper/global-this'
-import {readAsArrayBuffer} from './array-buffer'
+import readAsArrayBuffer from './array-buffer'
 import arrayBufferToBinaryString from '../helper/array-buffer-to-binary-string'
 
-const {readAsBinaryString} = FileReader.prototype
+const {readAsBinaryString: fileReaderReadAsBinaryString} = FileReader.prototype
 
 function getBinaryStringFromArrayBuffer(blob) {
   return readAsArrayBuffer(blob).then(arrayBufferToBinaryString)
 }
 
 // IE 10 don't has `readAsBinaryString`
-const binaryString = readAsBinaryString
-  ? promisify(readAsBinaryString)
+const readAsBinaryString = fileReaderReadAsBinaryString
+  ? promisify(fileReaderReadAsBinaryString)
   : getBinaryStringFromArrayBuffer
 
-export {binaryString, binaryString as readAsBinaryString}
+export default readAsBinaryString
