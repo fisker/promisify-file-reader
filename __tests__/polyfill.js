@@ -2,7 +2,7 @@ import {readFileSync} from 'fs'
 import arrayBufferToBinaryString from '../src/helper/array-buffer-to-binary-string'
 
 delete window.FileReader.prototype.readAsBinaryString
-const {readAsBinaryString} = require('../src/core/binary-string')
+const readAsBinaryString = require('../src/core/binary-string').default
 
 const png = readFileSync(`${__dirname}/test.png`)
 
