@@ -42,4 +42,4 @@ export default [
   {format: 'esm'},
   {format: 'esm', minify: true},
   {format: 'cjs'},
-].map(createBuild)
+].map((options) => createBuild(options))
