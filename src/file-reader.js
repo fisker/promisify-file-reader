@@ -1,4 +1,3 @@
-// eslint-disable-next-line unicorn/import-index
 import * as core from './core/index'
 import * as staticMethods from './static-methods'
 
