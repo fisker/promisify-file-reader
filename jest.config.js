@@ -4,4 +4,5 @@ module.exports = {
   verbose: true,
   testPathIgnorePatterns: ['.eslintrc.js'],
   testEnvironmentOptions: {resources: 'usable'},
+  testEnvironment: 'jsdom',
 }
