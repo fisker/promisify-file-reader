@@ -18,9 +18,7 @@ const moduleName = 'PromisifyFileReader'
 
 function createBuild({format, minify = false, extension}) {
   const entry = format === 'esm' ? 'index' : 'file-reader'
-  const filename = `index${
-    minify ? '.min' : ''
-  }.${extension}`
+  const filename = `index${minify ? '.min' : ''}.${extension}`
 
   return {
     input: `src/${entry}.js`,

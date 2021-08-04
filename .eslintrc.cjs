@@ -22,6 +22,7 @@ module.exports = {
       extends: ['@fisker/jest'],
       globals: {
         __dirname: 'readonly',
+        require: 'readonly',
       },
       rules: {
         'unicorn/prefer-node-protocol': 'off',
