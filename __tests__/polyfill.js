@@ -1,11 +1,11 @@
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import {readFileSync} from 'fs'
-import arrayBufferToBinaryString from '../src/helper/array-buffer-to-binary-string'
+import path from 'path'
+import arrayBufferToBinaryString from '../src/helper/array-buffer-to-binary-string.js'
 
 delete window.FileReader.prototype.readAsBinaryString
-const readAsBinaryString = require('../src/core/binary-string').default
+const readAsBinaryString = require('../src/core/binary-string.js').default
 
-const png = readFileSync(`${__dirname}/test.png`)
+const png = readFileSync(path.join(__dirname, 'test.png'))
 
 const pngFile = new window.File([png.buffer], 'test.png', {
   type: 'image/png',

@@ -1,4 +1,4 @@
-import {FileReader, Promise} from './global-this'
+import {FileReader, Promise} from './global-this.js'
 
 function promisify(method) {
   return (blob, encoding) =>

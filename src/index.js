@@ -1,2 +1,2 @@
-export {default} from './file-reader'
-export * from './static-methods'
+export {default} from './file-reader.js'
+export * from './static-methods.js'

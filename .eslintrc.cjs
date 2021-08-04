@@ -16,5 +16,16 @@ module.exports = {
   rules: {},
   plugins: [],
   globals: {},
-  overrides: [],
+  overrides: [
+    {
+      files: ['__tests__/**/*'],
+      extends: ['@fisker/jest'],
+      globals: {
+        __dirname: 'readonly',
+      },
+      rules: {
+        'unicorn/prefer-node-protocol': 'off',
+      },
+    },
+  ],
 }

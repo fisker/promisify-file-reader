@@ -1,14 +1,15 @@
-// eslint-disable-next-line unicorn/prefer-node-protocol
 import {readFileSync} from 'fs'
+import path from 'path'
+import {Buffer} from 'buffer'
 
 import {
   readAsArrayBuffer,
   readAsBinaryString,
   readAsDataURL,
   readAsText,
-} from '../src'
+} from '../src/index.js'
 
-const png = readFileSync(`${__dirname}/test.png`)
+const png = readFileSync(path.join(__dirname, 'test.png'))
 
 const pngFile = new window.File([png.buffer], 'test.png', {
   type: 'image/png',
