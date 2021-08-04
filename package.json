@@ -20,7 +20,7 @@
     "url": "https://www.fiskercheung.com/"
   },
   "sideEffects": false,
-  "main": "dist/index.common.js",
+  "main": "dist/index.cjs",
   "jsdelivr": "dist/index.min.js",
   "unpkg": "dist/index.min.js",
   "module": "dist/index.min.mjs",
@@ -87,5 +87,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
   }
 }
