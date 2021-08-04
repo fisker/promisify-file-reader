@@ -3,7 +3,7 @@ import {
   readAsBinaryString,
   readAsDataURL,
   readAsText,
-} from './core/index'
+} from './core/index.js'
 
 export {
   readAsArrayBuffer,

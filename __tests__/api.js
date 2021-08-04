@@ -7,7 +7,7 @@ import PromisifyFileReader, {
   readAsBinaryString,
   readAsDataURL,
   readAsText,
-} from '../src'
+} from '../src/index.js'
 
 describe('constructor', () => {
   test('PromisifyFileReader is A class', () => {

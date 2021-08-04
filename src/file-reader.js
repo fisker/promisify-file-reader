@@ -1,5 +1,5 @@
-import * as core from './core/index'
-import * as staticMethods from './static-methods'
+import * as core from './core/index.js'
+import * as staticMethods from './static-methods.js'
 
 class FileReader {}
 Object.assign(FileReader.prototype, core)

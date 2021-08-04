@@ -26,7 +26,7 @@
 
 ```text
 dist/
-├─ index.common.js  ( CommonJS )
+├─ index.cjs        ( CommonJS )
 ├─ index.js         ( UMD )
 ├─ index.min.js     ( UMD, compressed )
 ├─ index.mjs        ( ES Module )
@@ -131,7 +131,3 @@ import PromisifyFileReader, {
 ## Related
 
 - [promisify-file](https://github.com/fisker/promisify-file)
-
-## License
-
-MIT © [fisker Cheung](https://www.fiskercheung.com/)
