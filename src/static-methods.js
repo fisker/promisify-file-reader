@@ -1,10 +1,3 @@
-import {
-  readAsArrayBuffer,
-  readAsBinaryString,
-  readAsDataURL,
-  readAsText,
-} from './core/index.js'
-
 export {
   readAsArrayBuffer,
   readAsBinaryString,
@@ -14,4 +7,4 @@ export {
   readAsBinaryString as binaryString,
   readAsDataURL as dataURL,
   readAsText as text,
-}
+} from './core/index.js'
